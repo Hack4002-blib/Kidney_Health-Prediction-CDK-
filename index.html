@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidney Health Prediction</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1><span>KID</span>NEY HEA<span>LTH PREDI</span>CTION</h1>
+        <form action="/predict" method="POST">
+            <label>Age (years):</label>
+            <input type="number" name="age" required>
+            <label>Blood Pressure (mmHg):</label>
+            <input type="number" name="bp" required>
+            <label>Sugar Level in Urine:</label>
+            <input type="number" name="su" required>
+            <label>Specific Gravity:</label>
+            <input type="number" step="0.01" name="sg" required>
+            <label>Blood Glucose Random (mg/dL):</label>
+            <input type="number" name="bgr" required>
+            <label>Serum Creatinine (mg/dL):</label>
+            <input type="number" step="0.01" name="sc" required>
+            <label>Hemoglobin (g/dL):</label>
+            <input type="number" step="0.01" name="hemo" required>
+            <label>Blood Urea (mg/dL):</label>
+            <input type="number" name="bu" required>
+            <label>Red Blood Cells (0: Normal, 1: Abnormal):</label>
+            <input type="number" name="rbc" min="0" max="1" required>
+            <label>Pus Cell Clumps (0: Not Present, 1: Present):</label>
+            <input type="number" name="pcc" min="0" max="1" required>
+            <label>Hypertension (0: No, 1: Yes):</label>
+            <input type="number" name="htn" min="0" max="1" required>
+            <label>Appetite (0: Poor, 1: Good):</label>
+            <input type="number" name="appet" min="0" max="1" required>
+            <label>Anemia (0: No, 1: Yes):</label>
+            <input type="number" name="ane" min="0" max="1" required>
+            <button type="submit">PREDICT</button>
+        </form>
+    </div>
+</body>
+</html>
